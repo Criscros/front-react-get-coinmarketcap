@@ -20,14 +20,8 @@ function Home() {
 
     $('#my-modal-ok').on('click', function() {
       $.modal.close();
-      var audio = document.getElementById("playAudio");
-      audio.volume = "0.5"
-      audio.play();
     });
 
-    $('#my-modal-no').on('click', function() {
-      window.location.href = 'https://mokitajar.com';
-    });
 
 
   }, []);
@@ -52,11 +46,10 @@ function Home() {
 
               </div>
               <div className="modal-body">
-                <h5 className="modal-title">MOKITAJAR</h5>
+                <h5 className="modal-title">EFROUTING</h5>
                 <p>
-                      Es un plataforma para <b>Adultos</b>  .
-                      Debes tener +18 para entrar
-                      y estar de acuerdo con los terminos y condiciones del website  y sus servicios .
+                      Es un plataforma para <b>Crypto</b>  .
+                      Puedes visualizar informacion detallada
                   </p>
               </div>
               <div className="modal-footer">
