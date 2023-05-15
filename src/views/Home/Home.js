@@ -4,8 +4,24 @@ import 'jquery-modal';
 import './Home.css';
 import '../../assets/css/bootstrap/css/bootstrap.min.css'
 
+import CoinMarketCapService from '../../services/CoinMarketCapService';
+
 function Home() {
 
+  const coinMarketCapService = new CoinMarketCapService();
+
+
+  // GET DATA ....
+  async function fetchData() {
+    try {
+      const topCryptocurrencies = await coinMarketCapService.getTopCryptocurrencies();
+      console.log('topCryptocurrencies', topCryptocurrencies)
+
+    } catch (error) {
+      // Handle the error
+      console.log(error)
+    }
+  }
 
   useEffect(() => {
 
@@ -21,7 +37,9 @@ function Home() {
     $('#my-modal-ok').on('click', function() {
       $.modal.close();
     });
+    console.log('*************')
 
+    fetchData()
 
 
   }, []);
